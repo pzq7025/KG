@@ -1,0 +1,7 @@
+text = "whut的网址是https://whut.edu.com, 它的连接是http://whut.edu.cn,它是华师的女朋友,华师的连接是：htt://whut.edu.com/refigner/asfsdx/ppt.html" \
+           "还有一个网站是https://www.baidu.com/"
+    part_n = re.compile(r"[a-zA-Z]+://[a-zA-Z]+\.[a-zA-Z]+\.[com|cn]+", re.S)
+    part_s = re.compile(r"[a-zA-Z]+://[a-zA-Z]+\.[a-zA-Z]+\.[com|cn]+/.*?\.[html]+", re.S)
+    result = re.findall(part_n, text)
+    result_1 = re.findall(part_s, text)
+    print(result_1, result)
